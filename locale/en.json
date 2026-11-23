@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "Interface text size",
+    "description": "Edits two interface text sizes from Settings → General: the left sidebar rows, the top session title and view tabs, and the right sidebar tabs and guide entries; the secondary size covers timestamps, descriptions and status labels.",
+    "detail": "docs/DETAIL.md"
+  }
+}

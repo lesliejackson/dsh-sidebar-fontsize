@@ -1,0 +1,6 @@
+- insert:
+    - id: sidebar-fontsize
+      name: '@local/dsh-sidebar-fontsize'
+      config:
+        fontSize: 15
+        smallFontSize: 12
