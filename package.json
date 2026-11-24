@@ -1,6 +1,6 @@
 {
   "name": "@local/dsh-sidebar-fontsize",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Two configurable interface text sizes for DeepSeek Harness: sidebars, the session header and right-sidebar panels.",
   "type": "module",
   "license": "MIT",

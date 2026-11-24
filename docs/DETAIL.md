@@ -13,6 +13,11 @@ Open **Settings → General** and find *Title text size* and *Secondary text siz
 (next to the appearance and font rows). Each row has a −/+ stepper; edits are
 written through the settings document, apply immediately, and survive restarts.
 
+A step is previewed locally: the number and the document restyle at once, and the
+settled value is written as one atomic mutation once the clicks stop for about
+220 ms. Consecutive steps therefore collapse into one settings write instead of
+one whole-document write per click.
+
 | Row | Field | Range | Default | Applies to |
 | --- | --- | --- | --- | --- |
 | Title text size | `fontSize` | 10–24 | 15 | Left sidebar session/workspace titles, navigation rows, group names, the New session control; the session header breadcrumbs and view tabs; right sidebar tab titles and guide entry titles; the whole type scale inside right sidebar panels |

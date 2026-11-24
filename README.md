@@ -11,7 +11,7 @@
 
 - **Host 半侧**（`index.js`）把样式注入页面 `<head>`：`webserver/index-inject` 每次渲染时生成一张 `[data-sidebar-scrollport]`、`[data-conversation-tabs]`、`[data-sidebar-right-panel]` 等宿主钩子的作用域规则表。
 - 两个字段都用 schemastery `.volatile()` 声明，并通过 `settings.configure({ auto: false })` 注册为 `sidebar-fontsize` 设置项。
-- **浏览器半侧**（`client.js`）在设置页注册两行（`settings.general.item`），写值走 `ctx.configForms.get('sidebar-fontsize')`，同时把 `--dsh-sidebar-fontsize` / `--dsh-sidebar-fontsize-small` 直接写到 `documentElement`，让类规则立即重排。
+- **浏览器半侧**（`client.js`）在设置页注册两行（`settings.general.item`），写值走 `ctx.configForms.get('sidebar-fontsize')`，同时把 `--dsh-sidebar-fontsize` / `--dsh-sidebar-fontsize-small` 直接写到 `documentElement`，让类规则立即重排。点按是本地即时的：行内先显示并应用新值，约 220 ms 内的连续点按合并成**一次** `mutate` 写入，避免一次点击一次全量设置写入而把设置页堵住。
 - 右侧栏里第三方面板（文件树 / Git / 任务板 / 浏览器）用 DSH 的 `--dsw-font-*` 字号标尺绘制，插件在 `[data-sidebar-right-panel]` 内按比例重映射整套标尺（以 14px 为基准），不需要改那些插件。
 
 ## 安装
